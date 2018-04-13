@@ -1,0 +1,105 @@
+.input-label{
+    font-family: 'Chewy', cursive;
+    font-size:2rem;
+}
+.section-head{
+    font-size: 7rem;
+    font-family: 'Chewy', cursive;
+}
+.submit-button{
+    font-family: 'Chewy', cursive;
+    padding:3rem;
+    color:black;
+    
+
+}
+#answer-div{
+    font-family: 'Chewy', cursive;
+    font-size:2rem;
+}
+.data-point{
+    font-family: 'Chewy', cursive;
+    font-size:2rem;
+    border: 0rem;
+    width:24rem;
+    color:orange;
+    text-align:center;
+}
+#mainlogo{
+    height:8rem;
+    width:8rem;
+}
+#main-con{
+    background: #ffffffc4;
+    margin-top:3rem;
+    
+}
+.navbar-brand{
+    height:5rem;
+    width:5rem;
+    margin-right:6rem;
+    margin-left:2rem;
+    
+}
+.nav-link{
+    color:white;
+    font-size:1.5rem;
+    font-family: 'Chewy', cursive;
+}
+body{
+    background:orange;
+}
+.card-img-bottom{
+    width:10rem;
+    height:10rem;
+}
+.card-title {
+    margin-bottom: .75rem;
+    font-size: 4rem;
+    font-family: 'Chewy', cursive;
+    
+}
+.card-text{
+    font-size:1rem;
+}
+.input-label{
+    margin-right:2rem;
+}
+.submit-button{
+    height:3rem;
+   margin-top:2rem;
+   background:black;
+   color:white;
+   margin-bottom:1.5rem;
+}
+
+.submit-button:hover{
+    background-color:orange;
+}
+.nav-link:hover{
+    color:orange;
+}
+.nav-link{
+    color:black
+}
+
+#main{
+   background-color:black
+}
+.main{
+    
+   
+   background-image:url('assets/city.jpg');
+   
+   background-size:cover;
+
+    
+}
+.hold{
+    padding:0rem;
+   background:red;
+}
+.navbar{
+    background: #ffffffc4;
+  
+}
