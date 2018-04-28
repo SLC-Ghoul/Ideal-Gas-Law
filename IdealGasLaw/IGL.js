@@ -1,27 +1,32 @@
-function convertCelsiusToKelvin(c) {
-    k = c + 273
-    console.log(k)
-}
-function convertPascalToAtm(pa){
-    atm = pa/ 101325
-    console.log(atm)
-}
 
 
+ // Converts celsius to kelvin
+$('#celsius-con').on('click',function(){
+    event.preventDefault();
+    function convertCelsiusToKelvin(celsius){
+        var kelvin = parseInt(celsius) + 273
+         $('#answer-div2').text(kelvin + ' K')
+     } 
+    
+    $celsius = $('#celsius-con-input').val()
+    convertCelsiusToKelvin($celsius)
+   
+})
 
+// Converts fahrenheit to kelvin
+$('#fahrenheit-con').on('click',function(){
+    event.preventDefault();
+    function convertFahrenheitToKelvin(fahrenheit){
+        var kelvin = ((parseInt(fahrenheit) + 459.67)* 5)/9
+        var Rkelvin = kelvin.toFixed(3)
+        $('#answer-div1').text(Rkelvin + ' K')
+    }
+    $fahrenheit = $('#fahrenheit-con-input').val()
+    convertFahrenheitToKelvin($fahrenheit)
+   
+})
 
-
-function findTemperature(Pressure, Volume, moles, gasConstant) {
-    Temperature = (Pressure * Volume) / (moles * gasConstant)
-    console.log(Temperature)
-}
-function findmoles(Pressure,Volume,gasConstant,Temperature){
-    moles = (Pressure * Volume)/(gasConstant * Temperature)
-    console.log(moles)   
-}
-
-
-
+//function to solve for pressure given volume moles temperature and Ideal Gas constant
 $('#calculate-pressure').on('click',function(){
     function findPressure(Volume, moles, Temperature, gasConstant) {
         Pressure = (moles * gasConstant * Temperature) / Volume
@@ -36,7 +41,7 @@ $('#calculate-pressure').on('click',function(){
    findPressure($Volume,$moles,$temperature,$gasConstant)
    
 })
-
+//function to solve for volume given pressure, moles, temperature, and Ideal Gas Constant
 $('#calculate-volume').on('click',function(){
     function findVolume(pressure, moles, Temperature, gasConstant) {
         volume = (moles * Temperature * gasConstant)/pressure
@@ -52,7 +57,7 @@ $('#calculate-volume').on('click',function(){
    findVolume($pressure,$moles,$temperature,$gasConstant)
    console.log($pressure,$moles,$temperature,$gasConstant)
 })
-
+// function to solve for temperature given pressure, volume, moles, and Ideal Gas Constant
 $('#calculate-temperature').on('click',function(){
     function findTemperature(pressure,volume,moles,gasConstant){
         temperature = (pressure * volume)/(moles * gasConstant)
@@ -66,7 +71,7 @@ $('#calculate-temperature').on('click',function(){
     $gasConstant = 0.0821
     findTemperature($pressure,$volume,$moles,$gasConstant)
 })
-
+// function to solve for mol given pressure, volume, temperature, and Ideal Gas Constant
 $('#calculate-mol').on('click',function(){
     function findMol(pressure,volume,gasConstant,temperature){
         mol =  (pressure * volume)/(gasConstant * temperature)

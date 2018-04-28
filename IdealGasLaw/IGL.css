@@ -13,16 +13,17 @@
     
 
 }
-#answer-div{
+
+#answer-div2 , #answer-div1, #answer-div{
     font-family: 'Chewy', cursive;
     font-size:2rem;
+
 }
 .data-point{
     font-family: 'Chewy', cursive;
     font-size:2rem;
     border: 0rem;
     width:24rem;
-    color:orange;
     text-align:center;
 }
 #mainlogo{
