@@ -1,3 +1,4 @@
+
 .input-label{
     font-family: 'Chewy', cursive;
     font-size:2rem;
@@ -5,6 +6,11 @@
 .section-head{
     font-size: 7rem;
     font-family: 'Chewy', cursive;
+}
+.section-head2{
+    font-size: 4rem;
+    font-family: 'Chewy', cursive;
+    margin-bottom: 3rem;
 }
 .submit-button{
     font-family: 'Chewy', cursive;
@@ -31,7 +37,7 @@
     width:8rem;
 }
 #main-con{
-    background: #ffffffc4;
+    background: #ffffff4f;
     margin-top:3rem;
     
 }
@@ -75,10 +81,10 @@ body{
 }
 
 .submit-button:hover{
-    background-color:orange;
+    background-color:#1cf3ff;
 }
 .nav-link:hover{
-    color:orange;
+    color:#1cf3ff;
 }
 .nav-link{
     color:black
@@ -90,7 +96,7 @@ body{
 .main{
     
    
-   background-image:url('assets/city.jpg');
+   background-image:url('assets/air.jpg');
    
    background-size:cover;
 
@@ -101,6 +107,12 @@ body{
    background:red;
 }
 .navbar{
-    background: #ffffffc4;
+    background: #c4d4dc00;
   
 }
+.dropdown-item{
+    color:blue;
+}
+
+
+

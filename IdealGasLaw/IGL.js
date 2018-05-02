@@ -5,7 +5,10 @@ $('#celsius-con').on('click',function(){
     event.preventDefault();
     function convertCelsiusToKelvin(celsius){
         var kelvin = parseInt(celsius) + 273
-         $('#answer-div2').text(kelvin + ' K')
+         $('#answer-div2').text(kelvin + ' Kelvin')
+         if(!$celsius){
+             $('#answer-div2').text('Enter Celsius value to convert to Kelvin!')       
+         }
      } 
     
     $celsius = $('#celsius-con-input').val()
@@ -19,7 +22,10 @@ $('#fahrenheit-con').on('click',function(){
     function convertFahrenheitToKelvin(fahrenheit){
         var kelvin = ((parseInt(fahrenheit) + 459.67)* 5)/9
         var Rkelvin = kelvin.toFixed(3)
-        $('#answer-div1').text(Rkelvin + ' K')
+        $('#answer-div1').text(Rkelvin + ' Kelvin')
+        if(!$fahrenheit){
+            $('#answer-div1').text('Enter Farenheit value to convert to Kelvin!')       
+        }
     }
     $fahrenheit = $('#fahrenheit-con-input').val()
     convertFahrenheitToKelvin($fahrenheit)
@@ -32,12 +38,18 @@ $('#calculate-pressure').on('click',function(){
         Pressure = (moles * gasConstant * Temperature) / Volume
         Rpressure= (Pressure).toFixed(3)
         $('#answer-div').text(Rpressure + ' atm')
+        if((!$moles)||(!$temperature) || (!$Volume)){
+            $('#answer-div').text('Fill all input boxes to calculate pressure!')
+        }
+        
     }
     
    $moles = $('#mol-input').val()
    $Volume = $('#volume-input').val()
    $temperature = $('#celsius-input').val()
    $gasConstant = 0.0821
+   
+  
    findPressure($Volume,$moles,$temperature,$gasConstant)
    
 })
@@ -47,6 +59,9 @@ $('#calculate-volume').on('click',function(){
         volume = (moles * Temperature * gasConstant)/pressure
         rVolume= (volume).toFixed(3)
         $('#answer-div').text(rVolume + " liters")
+        if((!$moles)||(!$pressure) || (!$temperature)){
+            $('#answer-div').text('Fill all input boxes to calculate volume!')
+        }
     
     }
     
@@ -62,8 +77,10 @@ $('#calculate-temperature').on('click',function(){
     function findTemperature(pressure,volume,moles,gasConstant){
         temperature = (pressure * volume)/(moles * gasConstant)
         rtemperature = temperature.toFixed(3)
-
         $('#answer-div').text(rtemperature + ' Kelvin')
+        if((!$volume)||(!$pressure) || (!$moles)){
+            $('#answer-div').text('Fill all input boxes to calculate temperature!')
+        }
     }
     $pressure = $('#pressure-input').val()
     $volume = $('#volume-input').val()
@@ -77,6 +94,9 @@ $('#calculate-mol').on('click',function(){
         mol =  (pressure * volume)/(gasConstant * temperature)
         rmol = mol.toFixed(3)
         $('#answer-div').text(rmol + ' mol')
+        if((!$volume)||(!$pressure) || (!$temperature)){
+            $('#answer-div').text('Fill all input boxes to calculate mol!')
+        }
 
     }
     $pressure = $('#pressure-input').val()

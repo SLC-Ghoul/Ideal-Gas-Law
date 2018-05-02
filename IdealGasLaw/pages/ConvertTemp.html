@@ -24,14 +24,17 @@
         <div class=" navbar-collapse" id="navbarNavDropdown">
             <ul class="nav nav-pills justify-content">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="ConvertTemp.html">Convert
-                        <span class="sr-only">(current)</span>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Convert...
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="ConvertTemp.html">Temperature</a>
+                        <a class="dropdown-item" href="#">Pressure</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +52,7 @@
     </nav>
     <div id='main-con' class='container'>
         <h5 class="card-title text-center">Convert To Kelvin</h5>
-        <p class='text-center'>Enter celsius or fahrenheit to convert to kelvin! </p>
+        <p class='text-center'>Enter Celsius or Fahrenheit to convert to kelvin! </p>
         <div class='row'>
             <div class='col-lg-6'>
                 <form>
