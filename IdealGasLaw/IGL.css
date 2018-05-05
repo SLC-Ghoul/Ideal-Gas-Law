@@ -10,14 +10,20 @@
 .section-head2{
     font-size: 4rem;
     font-family: 'Chewy', cursive;
-    margin-bottom: 3rem;
+    
 }
 .submit-button{
     font-family: 'Chewy', cursive;
     padding:3rem;
     color:black;
     
-
+}
+.variable-display{
+    font-family: 'Chewy', cursive; 
+}
+.description{
+    color: #646262;
+    font-family: 'Chewy', cursive;
 }
 
 #answer-div2 , #answer-div1, #answer-div{
@@ -113,6 +119,13 @@ body{
 .dropdown-item{
     color:blue;
 }
-
-
+#title-text{
+    margin-bottom:0rem;
+}
+#title-box{
+    margin-bottom:3rem;
+}
+#var-box{
+    background: #00000012;
+}
 

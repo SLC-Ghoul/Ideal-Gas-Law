@@ -15,6 +15,35 @@ $('#celsius-con').on('click',function(){
     convertCelsiusToKelvin($celsius)
    
 })
+//Converts pascal to Standard Atmospheres
+$('#pascal-con').on('click',function(){
+    event.preventDefault();
+    function convertPascalToAtm(pascal){
+        if(!pascal){
+            $('#answer-div1').text('Enter Pascal value to convert to atm!')
+        }
+        var atm = pascal/101325
+        var Ratm = atm.toFixed(4)
+        $('#answer-div1').text(Ratm + ' atm')
+    }
+    var p = $('#pascal-con-input').val();
+    convertPascalToAtm(p)
+})
+
+//Converts Torr to Standard Atmospheres
+$('#torr-con').on('click',function(){
+    event.preventDefault();
+    function convertTorrToAtm(torr){
+        if(!torr){
+            $('#answer-div2').text('Enter Torr value to convert to atm!')
+        }
+        var atm = torr/760
+        var Ratm = atm.toFixed(4)
+        $('#answer-div2').text(Ratm + ' atm')
+    }
+    var p = $('#torr-con-input').val();
+    convertTorrToAtm(p);
+})
 
 // Converts fahrenheit to kelvin
 $('#fahrenheit-con').on('click',function(){

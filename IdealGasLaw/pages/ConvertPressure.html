@@ -21,19 +21,22 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse" id="navbarNavDropdown">
+        <div class=" navbar-collapse" id="navbarNavDropdown">
             <ul class="nav nav-pills justify-content">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="ConvertTemp.html">Convert
-                        <span class="sr-only">(current)</span>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Convert...
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="ConvertTemp.html">Temperature</a>
+                        <a class="dropdown-item" href="ConvertPressure.html">Pressure</a>
+                    </div>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Solve For...
@@ -42,37 +45,57 @@
                         <a class="dropdown-item" href="Volume.html">Volume</a>
                         <a class="dropdown-item" href="Pressure.html">Pressure</a>
                         <a class="dropdown-item" href="Temperature.html">Temperature</a>
+                        <a class="dropdown-item" href="mol.html">mol</a>
                     </div>
                 </li>
             </ul>
         </div>
+        <img class="navbar-brand" src="../assets/bwlogo.png">
     </nav>
-    <div class='container'>
+    <div id='main-con' class='container'>
+        <h5 class="card-title text-center">Convert To Standard Atmosphere</h5>
+        <p class='text-center'>Enter Pascal or Torr to convert to standard atmosphere! </p>
         <div class='row'>
-            <div class='col-lg-12 text-center'>
-                <h1 class='section-head'>Ideal Gas Law</h1>
+            <div class='col-lg-6'>
+                <form>
+                    <div class='form-row'>
+                        <div class='form-group col-lg-12 text-center '>
+                            <input type='number' class='data-point' id='pascal-con-input' placeholder="Pascal">
+                            <label class="input-label">Pa</label>
+                        </div>
+                        <div class='form-group col-lg-12 text-center '>
+                            <button class='btn submit-button' id='pascal-con'>Convert To atm!</button>
+                        </div>
+                    </div>
+                </form>
+                <div class='col-lg-12 text-center'>
+                    <h1 id='answer-div1'></h1>
+                </div>
             </div>
-            <div class='col-lg-12 text-center'>
-                    <h1 class='section-head2'>(PV = nRT)</h1>
+            <div class='col-lg-6'>
+                <form>
+                    <div class='form-row'>
+                        <div class='form-group col-lg-12 text-center '>
+                            <input type='number' class='data-point' id='torr-con-input' placeholder="Torr">
+                            <label class="input-label">Torr</label>
+                        </div>
+                        <div class='form-group col-lg-12 text-center '>
+                            <button class='btn submit-button' id='torr-con'>Convert To atm!</button>
+                        </div>
+                    </div>
+                </form>
+                <div class='col-lg-12 text-center'>
+                    <h1 id='answer-div2'></h1>
                 </div>
 
-            <div class='col-lg-12 '>
-                <figure>
-                    <blockquote cite="https://en.wikipedia.org/wiki/Ideal_gas_law">
-                        <h3>The Ideal Gas Law, also called the General Gas Equation, is the equation of state of a hypothetical
-                            ideal gas. It is a good approximation of the behavior of many gases under many conditions. R
-                            is equal to the Universal Gas Constant which is used to quantify the relationship between the
-                            properties of gas. These properties include pressure, volume, mol, and temperature. Given any
-                            three properties, we can solve for the fourth using the General Gas Equation.  Choose from the options at the top of the screen to see the Ideal Gas Law in action! </h3>
-                    </blockquote>
-                </figure>
             </div>
-            
-
         </div>
+
+
+
+
+
     </div>
-
-
 
 
 
