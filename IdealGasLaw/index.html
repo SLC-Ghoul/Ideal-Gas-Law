@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
 </head>
 
-<body class = 'main'>
+<body class='main'>
     <nav class="navbar navbar-expand-lg ">
         <img class="navbar-brand" src="../assets/bwlogo.png">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class=" navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-collapse" id="navbarNavDropdown">
             <ul class="nav nav-pills justify-content">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home
@@ -37,71 +37,62 @@
                         <a class="dropdown-item" href="ConvertPressure.html">Pressure</a>
                     </div>
                 </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Solve For...
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="Volume.html">Volume</a>
-                            <a class="dropdown-item" href="mol.html">mol</a>
-                            <a class="dropdown-item" href="Temperature.html">Temperature</a>
-                        </div>
-                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Solve For...
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="Volume.html">Volume</a>
+                        <a class="dropdown-item" href="Pressure.html">Pressure</a>
+                        <a class="dropdown-item" href="Temperature.html">Temperature</a>
+                        <a class="dropdown-item" href="mol.html">mol</a>
+                    </div>
+                </li>
             </ul>
         </div>
         <img class="navbar-brand" src="../assets/bwlogo.png">
     </nav>
-
-    <div id='main-con' class='container'>
-
-
-        <h5 class="card-title text-center">Solve For Pressure</h5>
-        <p class='text-center'>Enter volume, amount of gas, and temperature to solve for pressure!</p>
-
-
-
-        <form>
-            <div class='form-row'>
-                <div class='form-group col-lg-12 text-center '>
-                    <input type='number' class='data-point' id='volume-input' placeholder="Volume">
-                    <label class='input-label'>L</label>
-
-                </div>
-                <div class='form-group col-lg-12 text-center  '>
-                    <input type='number' class='data-point' id='mol-input' placeholder="Amount of Gas">
-                    <label class="input-label">mol</label>
-                </div>
-
-
-                <div class='form-group col-lg-12 text-center '>
-                        <input type='number' class='data-point' id='celsius-input' placeholder="Temperature">
-
-                        <label class='input-label'>K</label>
-
-                </div>
-                <div class='form-group col-lg-12 text-center '>
-                        <label class='input-label'>R = .0821 L atm/mol k</label>
-                    
-                </div>
-            </div>
-
-        </form>
-
-
+    <div class='container'>
         <div class='row'>
-            <div class='col-lg-12 text-center '>
-                <button class='btn submit-button' id='calculate-pressure'>Calculate Pressure!</button>
+            <div class='col-lg-12' id='title-box'>
+                <h1 class='section-head' id='title-text'>Ideal Gas Law Calculator</h1>
+
+                <h4 class='description'>The Ideal Gas Law, also called the General Gas Equation, is the equation of state of a hypothetical ideal
+                    gas. R is equal to the Universal Gas Constant which is used to quantify the relationship between the
+                    properties of gas. These properties include pressure, volume, mol, and temperature. Given any three properties,
+                    we can solve for the fourth using the General Gas Equation.</h4>
             </div>
-        </div>
-        <div class='row'>
-            <div class='col-lg-12 text-center '>
-                <h2 id='answer-div'></h2>
+
+
+            <div class='col-lg-6' id='var-box'>
+                <div class='text-center'>
+                    <h1 class='section-head2'>(PV = nRT)</h1>
+                </div>
+
+                <h2 class='variable-display'>P = Pressure</h2>
+                <h2 class='variable-display'>V = Volume</h2>
+                <h2 class='variable-display'>n = mol</h2>
+                <h2 class='variable-display'>R = Universal Gas Constant</h2>
+                <h2 class='variable-display'>T = Temperature</h2>
             </div>
+            <div class='col-lg-6 text-center' id='solve-box'>
+                <h5 class='section-head2'>What should we solve for?</h5>
+                <a href='Pressure.html'>
+                    <button id="pressure-button" type="button" class="btn submit-button btn-lg">Pressure</button>
+                </a>
+                <a href='Volume.html'>
+                    <button id="volume-button" type="button" class="btn submit-button btn-lg">Volume</button>
+                </a>
+                <a href='mol.html'>
+                    <button id="mol-button" type="button" class="btn submit-button btn-lg">mol</button>
+                </a>
+                <a href='Temperature.html'>
+                    <button id="temperature-button" type="button" class="btn submit-button btn-lg">Temperature</button>
+                </a>
+            </div>
+
+
         </div>
-
-
-
-
     </div>
 
 
